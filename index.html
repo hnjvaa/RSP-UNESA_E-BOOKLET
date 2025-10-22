@@ -140,27 +140,33 @@
     }
 
     /* ===== Responsif Mobile ===== */
-    @media (max-width: 480px) {
-      body {
-        justify-content: flex-start;
-        padding-top: 40px;
-        height: auto;
-      }
+   @media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 40px;
+    height: auto;
+    overflow-x: hidden;
+  }
 
-      .slider-container {
-        width: 420px;
-        max-width: 100%;
-        height: 588px;
-      }
+  .slider-container {
+    width: 90vw;                  /* ✅ otomatis menyesuaikan lebar layar HP */
+    aspect-ratio: 210 / 294;      /* ✅ menjaga proporsi asli gambar */
+    height: auto;
+    max-height: 90vh;             /* ✅ agar tidak melebihi tinggi layar */
+    border-radius: 30px;
+  }
 
-      .slide img {
-        object-fit: contain;
-        background: white;
-      }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;          /* ✅ gambar tampil full & proporsional */
+    background: white;
+  }
 
-      h1 { font-size: 1.5rem; }
-      .page-indicator { font-size: 1.1rem; }
-    }
+  h1 { font-size: 1.4rem; }
+  .page-indicator { font-size: 1rem; }
+}
+
   </style>
 </head>
 <body>
@@ -251,3 +257,4 @@
   </script>
 </body>
 </html>
+
